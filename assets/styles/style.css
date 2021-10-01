@@ -1,0 +1,378 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+}
+
+:root {
+    --font-size1: 1.7rem;
+}
+
+.btn {
+    border: none;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+    background-color: #D6000D;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 32px 90px 32px;
+}
+
+.logo {
+    font-size: 64px;
+    font-style: italic;
+    font-weight: 600;
+    color: #D6000D;
+}
+
+.logo::after {
+    content: ".";
+    color: black;
+}
+
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 50px;
+    list-style-type: none;
+}
+
+.header__menu__item {
+    font-size: var(--font-size1);
+}
+
+.header__menu .btn {
+    padding: 13px 64px;
+}
+
+.inicio {
+    display: grid;
+    grid: auto / 50% 50%;
+    justify-items: flex-end;
+    align-items: center;
+    padding-bottom: 200px;
+}
+
+.inicio__image {
+    width: 600px;
+}
+
+.inicio__container {
+    justify-self: center;
+    width: auto;
+}
+
+.inicio__title1 {
+    font-weight: 600;
+    font-size: var(--font-size1);
+}
+
+.inicio__title2 {
+    margin-bottom: 55px;
+    font-size: 4.6rem;
+    font-weight: 600;
+    color: #D6000D;
+}
+
+.inicio .btn{
+    padding: 13px 64px;
+    font-size: var(--font-size1);
+}
+
+.servicos {
+    display: grid;
+    grid: auto auto / 50% 50%;
+    justify-items: flex-start;
+    align-items: center;
+    margin: auto;
+    width:80%;
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+
+.servicos__list {
+    width: auto;
+    list-style-image: url(../icons/check-circle.svg);
+    list-style-position: inside;
+}
+
+.servicos__list__item {
+    font-size: var(--font-size1);
+    padding: 9px 0;
+}
+
+.servicos__image {
+    width: 600px;
+    justify-self: center;
+}
+
+.servicos__container {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.servicos__title1 {
+    font-weight: 600;
+    font-size: var(--font-size1);
+    margin-bottom: 16px;
+}
+
+.servicos__input {
+    height: 70px;
+    width: 300px;
+    padding: 12px;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    background-color: gainsboro;
+    box-sizing: border-box;
+}
+
+.servicos .btn {
+    width: 300px;
+    height: 70px;
+    font-size: 1.4rem;
+}
+
+.avaliacoes {
+    display: grid;
+    grid: auto / 50% 50%;
+    justify-items: center;
+    padding-bottom: 50px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: gainsboro;
+}
+
+.comment__redball {
+    height: 90px;
+    width: 90px;
+    border-radius: 90px;
+    background-color: red;
+}
+
+.comment__content {
+    display: grid;
+    grid: auto auto / auto;
+    width: calc(100% - 106px);
+}
+
+.comment__text {
+    align-self: flex-start;
+    margin-bottom: 12px;
+}
+
+.comment__info {
+    align-self: flex-end;
+}
+
+.comment__name {
+    font-size: var(--font-size1);
+}
+
+.comment__employer {
+    font-weight: 600;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 60px 0;
+    background-color: black;
+}
+
+.footer__container {
+    margin: 0 20px;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.footer .logo {
+    margin-top: -16px;
+    margin-bottom: 16px;
+    color: white;
+}
+
+.footer__title1 {
+    font-size: var(--font-size1);
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.redessocias {
+    display: flex;
+    justify-content: center;
+    column-gap: 16px;
+}
+
+.redessocias__icons {
+    width: 40px;
+}
+
+@media screen and (max-width:1400px) {
+    .inicio__image {
+        width: 500px;
+    }
+
+    .servicos__image {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .inicio {
+        grid: auto auto / auto;
+        row-gap: 90px;
+    }
+
+    .inicio__image {
+        justify-self: center;
+    }
+
+    .inicio__container {
+        text-align: center;
+    }
+
+    .servicos {
+        grid: auto auto auto / auto;
+        row-gap: 64px;
+    }
+
+    .servicos__image {
+        order: -1;
+    }
+
+    .servicos__container {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .header {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .header__menu {
+        margin-left: 50px;
+    }
+
+    .btn--hidden {
+        display: none;
+    }
+
+    .avaliacoes {
+        grid: auto auto / auto;
+        row-gap: 16px;
+    }
+
+    .servicos__input {
+        margin-bottom: 16px;
+    }
+
+    .footer {
+        flex-direction: column;
+        row-gap: 64px;
+    }
+
+    .footer__container {
+        font-size: 1rem;
+    }
+
+    .footer__container:nth-child(1) {
+        align-self: center;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --font-size1: 1.4rem;
+    }
+
+    .header__menu {
+        margin-left: 32px;
+        column-gap: 32px;
+    }
+
+    .inicio__image {
+        width: 300px;
+    }
+
+    .inicio__title2 {
+        font-size: 3.3rem;
+        margin-bottom: 35px;
+    }
+
+    .servicos__image {
+        width: 300px;
+    }
+
+    .servicos__input {
+        font-size: 1.3rem;
+        height: 55px;
+    }
+
+    .servicos .btn {
+        font-size: 1.3rem;
+        height: 55px;
+    }
+}
+
+@media screen and (max-width:410px) {
+    :root {
+        --font-size1: 1.2rem;
+    }
+    
+    .inicio__image {
+        width: 290px;
+    }
+    
+    .inicio__title2 {
+        font-size: 2.6rem
+    }
+    
+    .servicos {
+        width: 95%;
+    }
+
+    .servicos__image {
+        width: 290px;
+    }
+
+    .servicos__input {
+        font-size: 1.2rem;
+    }
+
+    .servicos .btn {
+        font-size: 1.2rem;
+    }
+}
